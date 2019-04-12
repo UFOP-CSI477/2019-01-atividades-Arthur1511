@@ -1,0 +1,39 @@
+h1, h3{
+    font-family: Arial;
+    color: grey;
+}
+
+
+a{
+    color : white;
+    background-color: blue;
+    text-decoration : underline;
+    padding : 10px 10px 10px;
+}
+
+
+/*CURSOR DO MOUSE ESTA SOBRE O LINK*/
+
+a:hover{
+
+    text-decoration : underline;
+    background-color: fuchsia;
+}
+
+/* INTERAÇÃO DO MOMENTO DO CLICK*/
+
+a:active{
+
+    color: blue;
+    background-color: red;
+
+}
+
+label{
+    font-family: Arial;
+    font-size: 12pt;
+}
+
+input{
+    border-color: lightgrey;
+}

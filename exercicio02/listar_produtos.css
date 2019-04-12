@@ -1,0 +1,62 @@
+/*Definições para tabelas*/
+
+table{
+    width: 100%;
+}
+
+table, th, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+th, td{
+
+    padding: 10px;
+}
+
+thead tr:hover{
+    background-color: lightblue;
+}
+
+tbody tr:hover{
+    background-color: darkorange;
+}
+
+tfoot tr:hover{
+    background-color: green;
+}
+
+tr:nth-child(even){
+    background-color: lightsalmon;
+}
+
+th{
+    font-size: 14pt;
+    font-family: tahoma;
+    font-style:italic;
+}
+
+a{
+    color : white;
+    background-color: blue;
+    text-decoration : underline;
+    padding : 5px 5px 5px;
+}
+
+
+/*CURSOR DO MOUSE ESTA SOBRE O LINK*/
+
+a:hover{
+
+    text-decoration : underline;
+    background-color: fuchsia;
+}
+
+/* INTERAÇÃO DO MOMENTO DO CLICK*/
+
+a:active{
+
+    color: blue;
+    background-color: red;
+
+}
