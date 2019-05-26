@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Cadastro de produtos</title>
+<!--        <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+              crossorigin="anonymous">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <h1>Dados do produto</h1>
+
+            <form name="dados">
+
+                <div class="form-group">
+                    <label class="" for="nome" id="labelNome">Nome:</label>
+                    <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome do produto"/>
+
+                    <div class="alert alert-danger" id="alertaNome" style="display: none">
+                        <span>Preencha o nome corretamente!</span>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="peso" id="labelPeso">Peso:</label>
+                    <input class="form-control" type="text" name="peso" id="peso" placeholder="0.00">
+
+                    <div class="alert alert-danger" id="alertaPeso" style="display: none">
+                        <span>Preencha o Peso corretamente!</span>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="unidade" id="labelUnidade">Unidade de medida:</label>
+                    <select class="custom-select" name="unidade" id="unidade">
+                        <option value="0">Selecione</option>
+                        <option value="1">Ton</option>
+                        <option value="2">Kg</option>
+                        <option value="3">g</option>
+                    </select>
+
+                    <div class="alert alert-danger" id="alertaUnidade" style="display: none">
+                        <span>Preencha a unidade corretamente!</span>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="valor" id="labelValor">Valor:</label>
+                    <input class="form-control" type="text" name="valor" id="valor" placeholder="R$0.00">
+
+                    <div class="alert alert-danger" id="alertaValor" style="display: none">
+                        <span>Preencha o valor corretamente!</span>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="estoque" id="labelEstoque">Estoque inicial:</label>
+                    <input class="form-control" type="text" name="estoque" id="estoque" placeholder="0">
+
+                    <div class="alert alert-danger" id="alertaEstoque" style="display: none">
+                        <span>Preencha o estoque corretamente!</span>
+                    </div>
+
+                </div>
+
+                <label id="labelMercado">Mercado:</label>
+
+                <div class="form-group">
+
+                    <input class="custom-radio" type="radio" id="interno" name="mercado" value="I">
+                    <label for="interno">Interno</label>
+
+                    <input type="radio" id="externo" name="mercado" value="E">
+                    <label for="externo">Externo</label>
+
+                    <div class="alert alert-danger" id="alertaMercado" style="display: none">
+                        <span>Preencha o mercado corretamente!</span>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="fornecedor" id="labelFornecedor">Fornecedor:</label>
+                    <select class="custom-select" name="fornecedor" id="fornecedor">
+                        <option value="0">Selecione</option>
+                        <option value="56">João Monlevade</option>
+                        <option value="64">Itabira</option>
+                        <option value="653">Alvinópolis</option>
+                        <option value="1">Belo Horizonte</option>
+                        <option value="638">Itaúna</option>
+                    </select>
+
+                    <div class="alert alert-danger" id="alertaFornecedor" style="display: none">
+                        <span>Preencha o fornecedor corretamente!</span>
+                    </div>
+
+                </div>
+
+                <div class="btn">
+                    <input class="btn btn-primary" type="submit" value="Cadastrar" name="cadastro" id="cadastro">
+                    <input class="btn btn-primary" type="reset" value="Limpar">
+
+                </div>
+
+                <div class="alert alert-danger" id="alerta" style="display: none">
+                    <span>Cadastro nao concluido!</span>
+                </div>
+
+                <div class="alert alert-success" id="alerta2" style="display: none">
+                    <span>Cadastro concluido!</span>
+                </div>
+
+                <br><br>
+                <a class="btn btn-primary" href="home.html">Voltar</a>
+
+            </form>
+
+
+            <script
+                    src="https://code.jquery.com/jquery-3.3.1.js"
+                    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                    crossorigin="anonymous">
+
+            </script>
+
+            <script src="./verifica.js"></script>
+        </div>
+    </body>
+</html>
