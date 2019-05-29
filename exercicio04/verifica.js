@@ -28,9 +28,34 @@ function validar_numero(campo, alerta, label) {
 function validar_select(campo, alerta, label) {
 
     console.log("Validar:" + campo);
-    console.log("Validar:" + campo.val());
+    console.log("Validar:" + $(campo).val());
 
-    if ($(campo).val() === 0) {
+    if ($(campo).val() === "0" || $(campo).prop("checked")=== "checked") {
+
+        $(alerta).slideDown();
+
+        $(label).addClass("text-danger");
+
+        $(campo).addClass("is-invalid");
+
+        return false;
+    }
+//    tudo correto
+
+    $(alerta).hide();
+    $(campo).removeClass("is-invalid");
+    $(label).removeClass("text-danger");
+    $(campo).addClass("is-valid");
+
+    return true;
+
+}
+
+function validar_radio(campo, alerta, label) {
+
+    console.log("Validar:" + campo);
+
+    if ($(campo).prop("checked")!== "checked") {
 
         $(alerta).slideDown();
 
@@ -91,14 +116,15 @@ $(document).ready(function () {
         //if (valida_nome && valida_peso && valida_valor && valida_estoque && valida_unidade && valida_mercado && valida_fornecedor){
         if (validar("#nome", "#alertaNome", "#labelNome") &&
             validar_numero("#peso", "#alertaPeso", "#labelPeso") &&
+            validar_select("#unidade option:selected", "#alertaUnidade", "#labelUnidade") &&
             validar_numero("#valor", "#alertaValor", "#labelValor") &&
             validar_numero("#estoque", "#alertaEstoque", "#labelEstoque") &&
-            validar_select("#unidade", "#alertaUnidade", "#labelUnidade") &&
-            validar_select("input[name='mercado']", "#alertaMercado", "#labelMercado") &&
+            validar_radio("input:radio[name='mercado']:checked", "#alertaMercado", "#labelMercado") &&
             validar_select("#fornecedor", "#alertaFornecedor", "#labelFornecedor")){
 
         } else {
             $("#alerta").slideDown();
+            return false;
         }
     });
 });
