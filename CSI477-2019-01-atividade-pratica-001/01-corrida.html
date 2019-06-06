@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="br">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+              crossorigin="anonymous">
+
+        <title>Corrida</title>
+    </head>
+    <body>
+        <h1>Dados dos Competidores</h1>
+        <br>
+
+        <form>
+
+            <div class="form-group">
+                <label id="Largada1">Largada 1:</label>
+                <input class="form-control-sm" type="text" name="nome1" id="nome1" placeholder="Nome do competidor"/>
+                <input class="form-control-sm" type="text" name="tempo1" id="tempo1" placeholder="Tempo (s)"/>
+
+                <div class="alert alert-danger" id="alertaNome1" style="display: none">
+                    <span>Preencha o nome do competidor!</span>
+                </div>
+
+                <div class="alert alert-danger" id="alertaTempo1" style="display: none">
+                    <span>Preencha o tempo do competidor!</span>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label id="Largada2">Largada 2:</label>
+                <input class="form-control-sm" type="text" name="nome2" id="nome2" placeholder="Nome do competidor"/>
+                <input class="form-control-sm" type="text" name="tempo2" id="tempo2" placeholder="Tempo (s)"/>
+
+                <div class="alert alert-danger" id="alertaNome2" style="display: none">
+                    <span>Preencha o nome do competidor!</span>
+                </div>
+
+                <div class="alert alert-danger" id="alertaTempo2" style="display: none">
+                    <span>Preencha o tempo do competidor!</span>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label id="Largada3">Largada 3:</label>
+                <input class="form-control-sm" type="text" name="nome3" id="nome3" placeholder="Nome do competidor"/>
+                <input class="form-control-sm" type="text" name="tempo3" id="tempo3" placeholder="Tempo (s)"/>
+
+                <div class="alert alert-danger" id="alertaNome3" style="display: none">
+                    <span>Preencha o nome do competidor!</span>
+                </div>
+
+                <div class="alert alert-danger" id="alertaTempo3" style="display: none">
+                    <span>Preencha o tempo do competidor!</span>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label id="Largada4">Largada 4:</label>
+                <input class="form-control-sm" type="text" name="nome4" id="nome4" placeholder="Nome do competidor"/>
+                <input class="form-control-sm" type="text" name="tempo4" id="tempo4" placeholder="Tempo (s)"/>
+
+                <div class="alert alert-danger" id="alertaNome4" style="display: none">
+                    <span>Preencha o nome do competidor!</span>
+                </div>
+
+                <div class="alert alert-danger" id="alertaTempo4" style="display: none">
+                    <span>Preencha o tempo do competidor!</span>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label id="Largada5">Largada 5:</label>
+                <input class="form-control-sm" type="text" name="nome5" id="nome5" placeholder="Nome do competidor"/>
+                <input class="form-control-sm" type="text" name="tempo5" id="tempo5" placeholder="Tempo (s)"/>
+
+                <div class="alert alert-danger" id="alertaNome5" style="display: none">
+                    <span>Preencha o nome do competidor!</span>
+                </div>
+
+                <div class="alert alert-danger" id="alertaTempo5" style="display: none">
+                    <span>Preencha o tempo do competidor!</span>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label id="Largada6">Largada 6:</label>
+                <input class="form-control-sm" type="text" name="nome6" id="nome6" placeholder="Nome do competidor"/>
+                <input class="form-control-sm" type="text" name="tempo6" id="tempo6" placeholder="Tempo (s)"/>
+
+                <div class="alert alert-danger" id="alertaNome6" style="display: none">
+                    <span>Preencha o nome do competidor!</span>
+                </div>
+
+                <div class="alert alert-danger" id="alertaTempo6" style="display: none">
+                    <span>Preencha o tempo do competidor!</span>
+                </div>
+
+            </div>
+
+
+        </form>
+
+        <div class="btn">
+            <input class="btn btn-primary" type="button" value="Apurar" name="apurar" id="apurar">
+            <input class="btn btn-primary" type="reset" value="Limpar">
+
+        </div>
+
+        <br>
+            <table class="table table-bordered table-hover table-striped"><!--style="display: none"-->
+
+                <thead>
+                <tr>
+                    <th> Posição</th>
+                    <th> Largada</th>
+                    <th> Competidor</th>
+                    <th> Tempo</th>
+                    <th>Resultado</th>
+
+                </tr>
+                </thead>
+
+                <tbody id="dados">
+
+                </tbody>
+
+            </table>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+                src="https://code.jquery.com/jquery-3.3.1.js"
+                integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                crossorigin="anonymous">
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+
+        <script src="./01-corrida.js"></script>
+    </body>
+</html>
