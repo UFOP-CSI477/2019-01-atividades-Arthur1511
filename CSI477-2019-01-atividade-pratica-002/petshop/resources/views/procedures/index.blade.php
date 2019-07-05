@@ -1,8 +1,8 @@
-@extends('principal')
+@extends('layouts.app')
 
 @section('titulo', 'Procedures')
 
-@section('conteudo')
+@section('content')
 
     <table class="table table-bordered table-hover table-striped">
 

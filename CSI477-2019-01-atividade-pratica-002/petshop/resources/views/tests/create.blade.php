@@ -1,8 +1,8 @@
-@extends('principal')
+@extends('layouts.app')
 
 @section('titulo', 'Inserir Teste')
 
-@section('conteudo')
+@section('content')
 
     <form class="form-group" method="post" action="{{route('tests.store')}}">
         @csrf

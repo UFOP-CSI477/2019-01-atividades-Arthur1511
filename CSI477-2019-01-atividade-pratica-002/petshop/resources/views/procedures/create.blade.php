@@ -1,8 +1,8 @@
-@extends('principal')
+@extends('layouts.app')
 
 @section('titulo', 'Inserir Procedimento')
 
-@section('conteudo')
+@section('content')
 
     <form class="form-group" method="post" action="{{route('procedures.store')}}">
         @csrf

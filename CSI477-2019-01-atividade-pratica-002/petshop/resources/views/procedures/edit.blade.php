@@ -1,8 +1,8 @@
-@extends('principal')
+@extends('layouts.app')
 
 @section('titulo', 'Procedimentos')
 
-@section('conteudo')
+@section('content')
 
     <form method="post" action="{{route('procedures.update', $procedure->id)}}">
         @csrf
