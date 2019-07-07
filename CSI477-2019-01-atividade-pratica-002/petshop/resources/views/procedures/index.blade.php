@@ -3,26 +3,30 @@
 @section('titulo', 'Procedures')
 
 @section('content')
-
+    <h1 class="text-primary" style="text-align: center">Procedimentos</h1>
     <table class="table table-bordered table-hover table-striped">
 
+        <thead>
         <tr>
-            <th >Código</th>
+            <th>Código</th>
             <th>Nome</th>
             <th>Preço</th>
             <th>Visualizar</th>
 
         </tr>
+        </thead>
 
-        @foreach($procedures as $e)
-            <tr>
-                <td>{{$e->id}}</td>
-                <td><a>{{$e->name}}</a></td>
-                <td>{{$e->price}}</td>
-                <td><a href="{{route('procedures.show', $e->id)}}">Exibir</a> </td>
+        <tbody>
+            @foreach($procedures as $e)
+                <tr>
+                    <td>{{$e->id}}</td>
+                    <td><a>{{$e->name}}</a></td>
+                    <td>{{$e->price}}</td>
+                    <td><a href="{{route('procedures.show', $e->id)}}">Exibir</a></td>
 
-            </tr>
-        @endforeach
+                </tr>
+            @endforeach
+        </tbody>
 
     </table>
 

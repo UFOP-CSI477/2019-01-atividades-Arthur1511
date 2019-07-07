@@ -11,17 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('procedures.index');
-});
+//Route::get('/', function () {
+//    return view('procedures.index');
+//});
 
 Route::resource('/procedures', 'ProcedureController');
 
 Route::resource('/users', 'UserController');
 
-Route::resource('/tests', 'TestController');
+Route::resource('/tests', 'TestController')->middleware('auth');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/adm', 'AdmController@index')->name('adm')->middleware('auth');

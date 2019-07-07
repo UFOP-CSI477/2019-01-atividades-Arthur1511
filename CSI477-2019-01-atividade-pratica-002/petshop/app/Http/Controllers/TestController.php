@@ -4,9 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Test;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TestController extends Controller
 {
+    /**
+     * TestController constructor.
+     */
+//    public function __construct()
+//    {
+//        $this->middleware('auth:api');
+//    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +23,13 @@ class TestController extends Controller
      */
     public function index()
     {
-        $tests = Test::all();
+        if (Auth::user()->type == 1){
+            $tests = Test::all();
+        }
+        else{
+            $tests = Test::all()->where('user_id', Auth::user()->id );
+        }
+
 
         $tests = $tests->sortBy('date')->sortBy(function ($tests) {
             return $tests->procedure->name;});

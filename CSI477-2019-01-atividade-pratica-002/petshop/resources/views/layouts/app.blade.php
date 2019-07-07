@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +35,7 @@
                         <ul class="navbar-nav mr-auto">
 
                             <li class="nav-item active">
-                                <a class="nav-link" href="{{route('procedures.index')}}">Área Geral <span
+                                <a class="nav-link" href="{{route('home')}}">Área Geral <span
                                             class="sr-only">(página atual)</span></a>
                             </li>
                             <li class="nav-item">
@@ -43,7 +43,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Área Administrativa</a>
+                                <a class="nav-link" href="{{route('adm')}}">Área Administrativa</a>
                             </li>
 
                         </ul>
@@ -85,6 +85,10 @@
                     </div>
                 </div>
             </nav>
+
+            @if(Session::has('mensagem'))
+                <h3 class="alert-danger"><strong>{{Session::get('mensagem')}}</strong></h3>
+            @endif
 
             <main class="py-4">
                 @yield('content')
